@@ -4,16 +4,19 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from "./app.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material";
-
+import { MatIconModule, MatInputModule } from "@angular/material";
+import { MatChipsModule } from "@angular/material/chips";
+import { SearchComponent } from "./components/search/search.component";
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SearchComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatChipsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
