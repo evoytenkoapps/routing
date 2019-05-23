@@ -10,8 +10,9 @@ import { MatChipInputEvent } from "@angular/material";
 export class SearchComponent implements OnInit {
   public addOnBlur = true;
   public readonly separatorKeysCodes: number[] = [COMMA, ENTER];
-  public data: [];
+  public data: string[] = [];
   public selectable = true;
+  removable = true;
   constructor() {}
 
   ngOnInit() {}
@@ -21,14 +22,20 @@ export class SearchComponent implements OnInit {
     const value = event.value;
     // Add our fruit
     if ((value || "").trim()) {
-      this.vmSearchFeature.data.tags.push(value.trim());
-      this.setParsedRadius();
-      this.getTask();
+      this.data.push(value.trim());
     }
 
     // Reset the input value
     if (input) {
       input.value = "";
+    }
+  }
+
+  remove(tag: string): void {
+    const index = this.data.indexOf(tag);
+
+    if (index >= 0) {
+      this.data.splice(index, 1);
     }
   }
 }
