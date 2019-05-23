@@ -1,15 +1,5 @@
-.one {
-  width: 40vh;
-  height: 40vh;
+.main-container {
+  width: 100%;
+  height: 100%;
   background: blue;
-}
-.two {
-  width: 40vh;
-  height: 40vh;
-  background: red;
-}
-.three {
-  width: 40vh;
-  height: 40vh;
-  background: black;
 }
