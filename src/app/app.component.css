@@ -1,0 +1,15 @@
+.one {
+  width: 40vh;
+  height: 40vh;
+  background: blue;
+}
+.two {
+  width: 40vh;
+  height: 40vh;
+  background: red;
+}
+.three {
+  width: 40vh;
+  height: 40vh;
+  background: black;
+}
