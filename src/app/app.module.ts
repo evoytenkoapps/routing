@@ -7,8 +7,11 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatIconModule, MatInputModule } from "@angular/material";
 import { MatChipsModule } from "@angular/material/chips";
 import { SearchComponent } from "./components/search/search.component";
+import { BaseComponent } from './components/base/base.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 @NgModule({
-  declarations: [AppComponent, SearchComponent],
+  declarations: [AppComponent, SearchComponent, BaseComponent, ParentComponent, ChildComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
