@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from "./app.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatIconModule, MatInputModule } from "@angular/material";
+import {MatButtonModule, MatIconModule, MatInputModule} from "@angular/material";
 import { MatChipsModule } from "@angular/material/chips";
 import { SearchComponent } from "./components/search/search.component";
 import { BaseComponent } from './components/base/base.component';
@@ -19,7 +19,8 @@ import { ChildComponent } from './components/child/child.component';
     MatFormFieldModule,
     MatInputModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
