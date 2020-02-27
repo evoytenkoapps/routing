@@ -19,7 +19,7 @@ import { TasksListComponent } from "./components/tasks-list/tasks-list.component
 
 const appRoutes: Routes = [
   {
-    path: "tasks",
+    path: "",
     component: TasksComponent,
     children: [
       {
