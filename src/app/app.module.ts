@@ -10,10 +10,6 @@ import {
   MatInputModule
 } from "@angular/material";
 import { MatChipsModule } from "@angular/material/chips";
-import { SearchComponent } from "./components/search/search.component";
-import { BaseComponent } from "./components/base/base.component";
-import { ParentComponent } from "./components/parent/parent.component";
-import { ChildComponent } from "./components/child/child.component";
 import { NgScrollbarModule } from "ngx-scrollbar";
 import { TasksComponent } from "./components/tasks/tasks.component";
 import { TaskComponent } from "./components/task/task.component";
@@ -44,10 +40,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
-    BaseComponent,
-    ParentComponent,
-    ChildComponent,
     TasksComponent,
     TaskComponent,
     MapComponent,
