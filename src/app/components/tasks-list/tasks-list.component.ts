@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, HostBinding, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-tasks-list",
@@ -6,8 +6,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tasks-list.component.css"]
 })
 export class TasksListComponent implements OnInit {
+  @HostBinding("class") classes = "base";
+
   constructor() {}
 
   ngOnInit() {}
-
 }
