@@ -1,5 +1,9 @@
 .base {
   width: 100%;
-  height: 100%;
-  background: black;
+  height: 200%;
+  background: wheat;
+}
+
+body {
+  margin: 0;
 }

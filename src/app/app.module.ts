@@ -4,14 +4,31 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { AppComponent } from "./app.component";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import {MatButtonModule, MatIconModule, MatInputModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule
+} from "@angular/material";
 import { MatChipsModule } from "@angular/material/chips";
 import { SearchComponent } from "./components/search/search.component";
-import { BaseComponent } from './components/base/base.component';
-import { ParentComponent } from './components/parent/parent.component';
-import { ChildComponent } from './components/child/child.component';
+import { BaseComponent } from "./components/base/base.component";
+import { ParentComponent } from "./components/parent/parent.component";
+import { ChildComponent } from "./components/child/child.component";
+import { NgScrollbarModule } from "ngx-scrollbar";
+import { TasksComponent } from './components/tasks/tasks.component';
+import { TaskComponent } from './components/task/task.component';
+import { MapComponent } from './components/map/map.component';
 @NgModule({
-  declarations: [AppComponent, SearchComponent, BaseComponent, ParentComponent, ChildComponent],
+  declarations: [
+    AppComponent,
+    SearchComponent,
+    BaseComponent,
+    ParentComponent,
+    ChildComponent,
+    TasksComponent,
+    TaskComponent,
+    MapComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -20,7 +37,8 @@ import { ChildComponent } from './components/child/child.component';
     MatInputModule,
     MatChipsModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    NgScrollbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
