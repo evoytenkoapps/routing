@@ -15,9 +15,32 @@ import { BaseComponent } from "./components/base/base.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { ChildComponent } from "./components/child/child.component";
 import { NgScrollbarModule } from "ngx-scrollbar";
-import { TasksComponent } from './components/tasks/tasks.component';
-import { TaskComponent } from './components/task/task.component';
-import { MapComponent } from './components/map/map.component';
+import { TasksComponent } from "./components/tasks/tasks.component";
+import { TaskComponent } from "./components/task/task.component";
+import { MapComponent } from "./components/map/map.component";
+import { RouterModule, Routes } from "@angular/router";
+import { TasksListComponent } from "./components/tasks-list/tasks-list.component";
+
+const appRoutes: Routes = [
+  {
+    path: "tasks",
+    component: TasksComponent,
+    children: [
+      {
+        path: "",
+        component: TasksListComponent,
+        children: [
+          {
+            path: ":id",
+            component: TaskComponent,
+            children: [{ path: "map", component: MapComponent }]
+          }
+        ]
+      }
+    ]
+  }
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +50,8 @@ import { MapComponent } from './components/map/map.component';
     ChildComponent,
     TasksComponent,
     TaskComponent,
-    MapComponent
+    MapComponent,
+    TasksListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +62,11 @@ import { MapComponent } from './components/map/map.component';
     MatChipsModule,
     MatIconModule,
     MatButtonModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
