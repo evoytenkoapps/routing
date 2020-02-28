@@ -10,3 +10,17 @@
   height: 100%;
   background-color: blue;
 }
+
+
+
+@media (max-width: 520px) {
+  :host.base {
+    width: 100%;
+  }
+
+  .main-container-blue {
+    width: 100%;
+  }
+
+
+}

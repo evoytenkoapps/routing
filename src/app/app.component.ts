@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { COMMA, ENTER } from "@angular/cdk/keycodes";
+import { Component, OnInit } from "@angular/core";
+import { ResizeService } from "./servicies/resize";
 
 @Component({
   selector: "app-root",
@@ -8,4 +8,8 @@ import { COMMA, ENTER } from "@angular/cdk/keycodes";
 })
 export class AppComponent {
   title = "test-flex";
+
+  constructor(private resize: ResizeService) {
+    resize.init();
+  }
 }

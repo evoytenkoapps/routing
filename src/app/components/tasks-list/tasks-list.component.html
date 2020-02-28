@@ -1,6 +1,6 @@
-<div class="main-container-red">
+<div class="main-container-red" [class.hide]="isHide === true">
   Tasks List
-  <div *ngFor="let task of tasks" class="my-botton" (click)="onClick(task)">
+  <div *ngFor="let task of tasks" class="my-botton" (click)="onRoute(task)">
     {{ "Task -" + task }}
   </div>
 </div>

@@ -1,2 +1,7 @@
-<div class="main-container-orange">Task  {{ taskId }}</div>
+<div class="main-container-orange" [class.hide]="isHide === true">
+  Task {{ taskId }}
+  <button class="show-map" (click)="onRoute()">
+    Show Map
+  </button>
+</div>
 <router-outlet></router-outlet>

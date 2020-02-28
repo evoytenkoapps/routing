@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: "app-map",
@@ -7,7 +8,17 @@ import { Component, HostBinding, OnInit } from "@angular/core";
 })
 export class MapComponent implements OnInit {
   @HostBinding("class") classes = "base";
-  constructor() {}
+  public taskId: string;
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.getCurrentNavigation();
+    this.taskId = this.router.url.split("/")[1];
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.taskId = this.router.url.split("/")[1];
+      }
+    });
+  }
 }
