@@ -1,2 +1,7 @@
-<div class="main-container-red">Tasks List</div>
+<div class="main-container-red">
+  Tasks List
+  <div *ngFor="let task of tasks" class="my-botton" (click)="onClick(task)">
+    {{ "Task -" + task }}
+  </div>
+</div>
 <router-outlet></router-outlet>

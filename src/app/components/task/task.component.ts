@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit } from "@angular/core";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: "app-task",
@@ -7,8 +8,18 @@ import { Component, HostBinding, OnInit } from "@angular/core";
 })
 export class TaskComponent implements OnInit {
   @HostBinding("class") classes = "base";
+  public taskId: string;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.getCurrentNavigation();
+    this.taskId = this.router.url.split("/")[1];
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.taskId = this.router.url.split("/")[1];
+      }
+    });
+  }
 }

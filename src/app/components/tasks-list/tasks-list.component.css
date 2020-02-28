@@ -9,4 +9,13 @@
   width: 33%;
   height: 100%;
   background-color: red;
+  box-sizing: border-box;
+}
+
+.my-botton {
+  background: white;
+  height: 10%;
+  width: calc(100% - 40px);
+  margin: 20px;
+  cursor: pointer;
 }
