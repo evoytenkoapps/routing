@@ -17,24 +17,13 @@ import { MapComponent } from "./components/map/map.component";
 import { RouterModule, Routes } from "@angular/router";
 import { TasksListComponent } from "./components/tasks-list/tasks-list.component";
 
-const appRoutes: Routes = [
+const desktopRoutes: Routes = [
   {
     path: "",
-    component: TasksComponent,
-    children: [
-      {
-        path: "",
-        component: TasksListComponent,
-        children: [
-          {
-            path: ":id",
-            component: TaskComponent,
-            children: [{ path: "map", component: MapComponent }]
-          }
-        ]
-      }
-    ]
-  }
+    component: TasksComponent
+  },
+  { path: ":id", component: TasksComponent },
+  { path: ":id/map", component: TasksComponent }
 ];
 
 @NgModule({
@@ -55,7 +44,7 @@ const appRoutes: Routes = [
     MatIconModule,
     MatButtonModule,
     NgScrollbarModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(desktopRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

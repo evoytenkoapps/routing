@@ -7,7 +7,6 @@ import { NavigationEnd, Router } from "@angular/router";
   styleUrls: ["./map.component.css"]
 })
 export class MapComponent implements OnInit {
-  @HostBinding("class") classes = "base";
   public taskId: string;
   constructor(private router: Router) {}
 

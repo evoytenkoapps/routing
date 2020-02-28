@@ -8,7 +8,6 @@ import { ResizeService } from "../../servicies/resize";
   styleUrls: ["./task.component.css"]
 })
 export class TaskComponent implements OnInit {
-  @HostBinding("class") classes = "base";
   public taskId: string;
   public isHide: boolean;
 

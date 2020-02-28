@@ -1,7 +1,10 @@
-<div class="main-container-orange" [class.hide]="isHide === true">
+<div class="main-container-orange">
   Task {{ taskId }}
-  <button class="show-map" (click)="onRoute()">
+  <button
+    *ngIf="resizeService.isMobile === true"
+    class="show-map"
+    (click)="onRoute()"
+  >
     Show Map
   </button>
 </div>
-<router-outlet></router-outlet>

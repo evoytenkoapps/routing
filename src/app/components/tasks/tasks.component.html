@@ -1,1 +1,13 @@
-<router-outlet></router-outlet>
+<ng-container *ngIf="isMobile === false">
+  <div class="base">
+    <app-tasks-list></app-tasks-list>
+    <app-task></app-task>
+    <app-map></app-map>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isMobile === true">
+  <app-tasks-list *ngIf="splitRoutes[1] === ''"></app-tasks-list>
+  <app-task *ngIf="splitRoutes.length == 2 && splitRoutes[1] !== ''"></app-task>
+  <app-map *ngIf="splitRoutes[2] === 'map'"></app-map>
+</ng-container>
